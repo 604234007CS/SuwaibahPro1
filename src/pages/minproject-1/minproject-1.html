@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+      <ion-title >  Movie App</ion-title>
+        <button ion-button menuToggle >
+          <ion-icon name="menu"></ion-icon>
+        </button>
+  </ion-navbar>
+</ion-header>
+<ion-content padding >
+  <ion-card color="light">
+    <ion-card-header>
+      All about Movie
+    </ion-card-header>
+  </ion-card>
+
+  
+    <ion-card-content >
+      <ion-item (click)="nowMovie()">
+        <ion-avatar item-left ><img src="assets/imgs/Now.jpg"></ion-avatar>
+        <ion-icon item-right name="arrow-dropright-circle"></ion-icon>
+        <h2>Now</h2>
+        <p>Now Playing </p>
+      </ion-item>
+
+      <ion-item (click)="upComing()">
+        <ion-avatar item-left><img src="assets/imgs/Upcomming.png"></ion-avatar>
+        <ion-icon item-right name="arrow-dropright-circle"></ion-icon>
+        <h2>Upcoming</h2>
+        <p>Upcoming Movie </p>
+      </ion-item>
+
+      <ion-item (click)="popular()">
+        <ion-avatar item-left><img src="assets/imgs/popula.png"></ion-avatar>
+        <ion-icon item-right name="arrow-dropright-circle"></ion-icon>
+        <h2>Popular</h2>
+        <p> Popular Movie </p>
+      </ion-item>
+
+      <ion-item (click)="topRated()">
+        <ion-avatar item-left><img src="assets/imgs/Top.png"></ion-avatar>
+        <ion-icon item-right name="arrow-dropright-circle"></ion-icon>
+        <h2>TopRated</h2>
+        <p>TopRated Movie </p>
+      </ion-item>
+    </ion-card-content>
+ 
+</ion-content>

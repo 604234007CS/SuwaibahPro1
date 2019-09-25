@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>video</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div class =" video-wrapper">
+    <ion-label class ="section-title">Video</ion-label>
+    <ion-list class="videos-list">
+  <ion-item *ngFor="let video of videos" (click)="openVideo(video.key)" class="youtube-video-cell">
+    <ion-icon name="videocam" item-start ></ion-icon>
+    {{video.name}}
+  </ion-item>
+</ion-list>
+</div>
+</ion-content>

@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>ArrrayJson</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-card *ngFor="let show of gameArray">
+    <ion-item >
+      <ion-avatar item-left>
+        <img src="http://localhost/shop/img/{{show.game_img}}">
+      </ion-avatar>
+      <h2><b>Name :</b> {{show.game_name}}</h2>
+      <p><b>Price :</b>{{show.game_price}}</p>
+    </ion-item>
+    <img src="http://localhost/shop/img/{{show.game_img}}">
+    <ion-card-content>
+        <p><b>Game ID :</b>&nbsp;{{show.game_id}}</p>
+        <p><b>Detail :</b>&nbsp;{{show.game_detail}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

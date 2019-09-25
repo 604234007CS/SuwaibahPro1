@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>DetailsMovie</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-card color = "dark">
+  <ion-card-header >
+     <ion-thumbnail  item-start>
+            <img src="https://image.tmdb.org/t/p/original/{{moviedata.poster_path}}">
+        </ion-thumbnail >
+        <button ion-button block icon-lef color="light"  (click)="openVideo(moviedata.id)" >Video Trailler</button>
+        <button ion-button block icon-lef color="light"  (click)="talk(moviedata.overview)" >textOrOptions</button>
+  </ion-card-header>
+</ion-card > 
+
+  <ion-card color = "light">  
+    <ion-card-content>
+    <h2><b>release_date</b></h2>
+    <p>{{moviedata.release_date}}</p>
+    <h2><b>Average</b></h2>
+    <p>{{moviedata.vote_average}}</p>
+    <h2><b>Overview</b></h2>
+    <p>{{moviedata.overview}}</p>
+  </ion-card-content>
+</ion-card>
+
+
+
+  
+</ion-content>

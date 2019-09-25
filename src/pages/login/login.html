@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-item>
+    <ion-label floating>ชื่อผู้ใช้</ion-label>
+    <ion-input type="" [(ngModel)]="username"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>รหัสผ่าน</ion-label>
+    <ion-input type="password" [(ngModel)]="password"></ion-input>
+  </ion-item>
+
+
+  <button ion-button block icon-lef (click)="signIn(usernaem,password)">
+    <ion-icon name="log-in"></ion-icon> &nbsp;OK
+  </button>
+  <h3>{{loginResult}}</h3>
+
+</ion-content>

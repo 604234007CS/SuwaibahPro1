@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>PostJson</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label >ชื่อ:</ion-label>
+    <ion-input type="text" [(ngModel)]="name"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label >นามสกุล:</ion-label>
+    <ion-input type="text" [(ngModel)]="surname"></ion-input>
+  </ion-item>
+  <ion-item>
+
+    <ion-label >อีเมล์:</ion-label>
+    <ion-input type="text" [(ngModel)]="email"></ion-input>
+  </ion-item>
+
+  <button ion-button block icon-lef (click)="signUp(name,surname,email)">
+    <ion-icon name="person"></ion-icon> &nbsp;ลงทะเบียน
+  </button>
+  {{returnMg}}
+</ion-content>

@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{contact.name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <img src="{{contact.imageUrl}}" width="150" height="150">
+  
+  <button ion-button block color="primary" (click)="call()">
+    <ion-icon name="call" ></ion-icon> &nbsp; &nbsp;CALL :&nbsp;
+    {{contact.telephone}}
+  </button>
+
+  <button ion-button block color="secondary" (click)="sms()">
+    <ion-icon name="chatboxes"></ion-icon> &nbsp; &nbsp;SMS :&nbsp;
+    {{contact.telephone}}
+  </button>
+
+
+</ion-content>

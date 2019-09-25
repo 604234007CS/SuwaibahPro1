@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>BarcodeScanner</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <button ion-button block color="secondary" (click)="scan()">
+    <ion-icon name="camera"></ion-icon> &nbsp; &nbsp;SCAN &nbsp;
+  </button>
+  <ion-card>
+    <ion-card-header>
+     ScanText
+    </ion-card-header>
+    <ion-card-content>
+      {{scanText}}
+    </ion-card-content>
+    <ion-card-header>
+      Scanfomat
+     </ion-card-header>
+     <ion-card-content>
+       {{scanFormat}}
+     </ion-card-content>
+  </ion-card>
+</ion-content>

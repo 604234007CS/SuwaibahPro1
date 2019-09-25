@@ -1,0 +1,7 @@
+{
+  "name": "appNative",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
