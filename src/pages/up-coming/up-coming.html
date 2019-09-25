@@ -1,7 +1,7 @@
 
 <ion-header>
   <ion-navbar>
-    <ion-title>upcoming</ion-title>
+    <ion-title text-center>Up Coming</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -11,10 +11,9 @@
     
       <ion-card-content>
       <ion-item *ngFor="let movie of moviesArray" (click)="getDetails(movie)">
-            <ion-thumbnail  item-left>
-                <img src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}">
+            <ion-thumbnail  item-right>
+                <img src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" style="display : block; width: 80px; height: 100px; ">
             </ion-thumbnail >
-            <ion-icon item-right color="medium" name="arrow-dropright"></ion-icon>
             <h2><b>{{movie.title}}</b></h2>
             <p>Release&nbsp;{{movie.release_date}}</p>
         
