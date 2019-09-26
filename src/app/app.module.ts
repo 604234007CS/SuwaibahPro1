@@ -1,7 +1,6 @@
 import { Minproject_1Page } from './../pages/minproject-1/minproject-1';
 import {HttpClientModule} from '@angular/common/http';
 import { JsonMenuPage } from './../pages/json-menu/json-menu';
-import { CameraPage } from './../pages/camera/camera';
 import { FlashPage } from './../pages/flash/flash';
 import { LoginPage } from './../pages/login/login';
 import { BarcodescanPage } from './../pages/barcodescan/barcodescan';
@@ -17,10 +16,12 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Flashlight } from '@ionic-native/flashlight';
 import { BatteryStatus } from '@ionic-native/battery-status';
-import { Camera, CameraOptions } from '@ionic-native/camera';
 import { ApiKeyProvider } from '../providers/api-key/api-key';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
+import { SocialSharing } from '@ionic-native/social-sharing';
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -29,7 +30,7 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
     BarcodescanPage,
     LoginPage,
     FlashPage,
-    CameraPage,
+    
     JsonMenuPage,
     Minproject_1Page
   
@@ -47,14 +48,14 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
     BarcodescanPage,
     LoginPage,
     FlashPage,
-    CameraPage,
+    
     JsonMenuPage,
     Minproject_1Page
    
   ],
   providers: [
     StatusBar,
-    SplashScreen,SMS,BarcodeScanner,Flashlight,BatteryStatus,Camera,YoutubeVideoPlayer,TextToSpeech,
+    SplashScreen,SMS,BarcodeScanner,Flashlight,BatteryStatus,YoutubeVideoPlayer,TextToSpeech,SocialSharing,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ApiKeyProvider
   ]

@@ -10,9 +10,10 @@
             <img src="https://image.tmdb.org/t/p/original/{{moviedata.poster_path}}">
         </ion-thumbnail >
         <button ion-button block icon-lef color="light"  (click)="openVideo(moviedata.id)" >Video Trailler</button>
-        <button ion-button block icon-lef color="light"  (click)="talk(moviedata.overview)" >textOrOptions</button>
+        
   </ion-card-header>
 </ion-card > 
+
 
   <ion-card color = "light">  
     <ion-card-content>
@@ -23,9 +24,14 @@
     <h2><b>Overview</b></h2>
     <p>{{moviedata.overview}}</p>
   </ion-card-content>
+  <button ion-button icon-lef color="light"  (click)="talk(moviedata.overview)" >TextOrOptions</button>
+
+  <ion-fab below right edge>
+    <button ion-fab color="light"><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab (click) = shareFace(moviedata) ><ion-icon name="logo-facebook"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab> 
 </ion-card>
-
-
-
   
 </ion-content>

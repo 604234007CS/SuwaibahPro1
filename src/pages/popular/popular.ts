@@ -1,6 +1,6 @@
 import { ApiKeyProvider } from './../../providers/api-key/api-key';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, } from 'ionic-angular';
 
 
 /**
