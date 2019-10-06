@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ApiKeyProvider } from '../../providers/api-key/api-key';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { SocialSharing } from '@ionic-native/social-sharing';
 
@@ -19,9 +18,10 @@ import { SocialSharing } from '@ionic-native/social-sharing';
   templateUrl: 'details-movie.html',
 })
 export class DetailsMoviePage {
- moviedata:any=[];
+  moviedata:any=[];
+  playing: boolean;
  
-   constructor(public navCtrl: NavController, public navParams: NavParams,private movieApi :ApiKeyProvider,private tts: TextToSpeech,
+   constructor(public navCtrl: NavController, public navParams: NavParams,private ttr: TextToSpeech,
     private socialSharing : SocialSharing ) {
    
   }
@@ -36,13 +36,15 @@ openVideo(movie){
     this.navCtrl.push("VideoPage",movie);
 }
 
- talk(textOrOptions){
-   console.log(textOrOptions);
-  this.tts.speak(textOrOptions)
-  .then(() => console.log('Success'))
-  .catch((reason: any) => console.log(reason));
-
+talk(textOrOptions:string){
+  this.ttr.speak(textOrOptions);
 }
+
+stop(){
+  this.ttr.speak("").then((value)=>{
+  this.playing=false;
+  });
+  }
 
 shareFace(movie){
   this.socialSharing.shareViaFacebook(movie.overview,movie.poster_path) 

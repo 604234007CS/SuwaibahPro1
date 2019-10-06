@@ -4,15 +4,22 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
 
-  <div class =" video-wrapper">
-    <ion-label class ="section-title">Video</ion-label>
-    <ion-list class="videos-list">
-  <ion-item *ngFor="let video of videos" (click)="openVideo(video.key)" class="youtube-video-cell">
-    <ion-icon name="videocam" item-start ></ion-icon>
-    {{video.name}}
-  </ion-item>
-</ion-list>
-</div>
-</ion-content>
+<ion-content padding>
+    <ion-card color="light">
+        <ion-card-content>
+            <ion-list *ngIf="videos.length != 0">
+                <ion-item *ngFor="let video of videos" class="item item-trns">
+                   <div class="title">
+                       {{video.title}}
+                       <div class="video-container">
+                           <iframe width="350" height="350" [src]="getVideo(video.key)" frameborder="0"></iframe>
+                       </div>
+                       <ion-icon name="logo-youtube"> {{video.name}}</ion-icon>                     
+                      </div>
+                </ion-item>
+              </ion-list>
+        </ion-card-content>
+      </ion-card>
+  
+  </ion-content>
