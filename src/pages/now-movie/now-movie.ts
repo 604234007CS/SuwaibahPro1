@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ApiKeyProvider } from '../../providers/api-key/api-key';
-import { Minproject_1Page } from '../minproject-1/minproject-1';
 
 
 /**
@@ -35,12 +34,7 @@ export class NowMoviePage {
   }
   getDetails(movie){
     this.navCtrl.push("DetailsMoviePage",movie);
-
-    
-  }
-
-  Movieapp(){  //ปุ่มhome
-    this.navCtrl.push(Minproject_1Page);
+ 
   }
 
   getItems(ev: any) {

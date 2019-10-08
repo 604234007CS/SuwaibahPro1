@@ -3,6 +3,7 @@
     <ion-title>DetailsMovie</ion-title>
   </ion-navbar>
 </ion-header>
+
 <ion-content padding>
   <ion-card color = "dark">
   <ion-card-header >
@@ -30,11 +31,11 @@
       <ion-icon name="mic"></ion-icon>
       &nbsp; LISTEN
     </button>
-    <button ion-button color="danger" clear    (click)="stop(moviedata.overview)">
+    <button ion-button color="danger" clear (click)="stop(moviedata.overview)">
       <ion-icon name="mic-off"></ion-icon> 
       &nbsp; STOP
     </button>
-
+    
   
   <ion-fab below right edge>
     <button ion-fab color="light"><ion-icon name="add"></ion-icon></button>

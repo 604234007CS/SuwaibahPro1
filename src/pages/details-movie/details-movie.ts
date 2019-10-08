@@ -5,6 +5,7 @@ import { SocialSharing } from '@ionic-native/social-sharing';
 
 
 
+
 /**
  * Generated class for the DetailsMoviePage page.
  *
@@ -41,9 +42,11 @@ talk(textOrOptions:string){
 }
 
 stop(){
-  this.ttr.speak("").then((value)=>{
-  this.playing=false;
-  });
+  this.ttr.speak("")
+      .then(() => console.log('Success'))
+      .catch((reason: any) => {
+        return console.log(reason);
+      });
   }
 
 shareFace(movie){
@@ -54,7 +57,11 @@ shareFace(movie){
   }).catch((error) =>{
       console.log("Fail posting");
   })
+
+  
 }
+
+
 
 
 
